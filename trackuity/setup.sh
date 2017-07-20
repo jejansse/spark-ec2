@@ -10,7 +10,7 @@ ln -f -s /usr/bin/python2.7 /etc/alternatives/python
 for line in `cat /root/spark-ec2/slaves`; do ssh $line 'yum -y install python27'; done
 for line in `cat /root/spark-ec2/slaves`; do ssh $line 'ln -f -s /usr/bin/python2.7 /etc/alternatives/python'; done
 # Fix for some strange machines we sometimes get
-for line in `cat /root/spark-ec2/slaves`; do ssh $line 'ln -f -s /usr/bin/python /etc/alternatives/python'; done
+#for line in `cat /root/spark-ec2/slaves`; do ssh $line 'ln -f -s /usr/bin/python /etc/alternatives/python'; done
 
 # Install some dependencies for processing
 easy_install-2.7 pip
