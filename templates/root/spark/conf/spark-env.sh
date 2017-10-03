@@ -29,3 +29,6 @@ if [ $(id -u) == "0" ]
 then
     ulimit -n 1000000
 fi
+
+# clean out worker dir after 2 days to free up space on the slave nodes
+export SPARK_WORKER_OPTS="-Dspark.worker.cleanup.enabled=true -Dspark.worker.cleanup.appDataTtl=172800"
