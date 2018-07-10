@@ -13,7 +13,6 @@ do
   ssh $line 'yum -y update';
   ssh $line 'yum -y install python27';
   ssh $line 'ln -f -s /usr/bin/python2.7 /etc/alternatives/python';
-  ssh $line 'ln -f -s /usr/bin/python /etc/alternatives/python';
 
   # scientific computing stack
   ssh $line 'easy_install-2.7 pip';
